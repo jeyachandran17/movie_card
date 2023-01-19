@@ -2,16 +2,13 @@
   height: 950px;
   width: 340px;
   border: none;
-  display: inline-block;
-  margin-right: 30px;
-  position:sticky;
-
 }
 
 img{
   height:650px;
   width:340px;
   margin-bottom: 10px;
+  object-fit: cover;
 }
 
 .tittle{
@@ -25,4 +22,11 @@ span{
 
 button{
   margin-right: 2px;
+}
+
+.App{
+  display:flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }

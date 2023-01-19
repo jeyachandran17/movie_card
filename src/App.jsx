@@ -75,20 +75,20 @@ export default function App(){
   return(
     <div className='App'>
       {/* <Movie_card /> */}
-      {movie.map((movie)=>(<Movie_card name={movie.name} poster ={movie.poster} summary={movie.summary} rating={movie.rating}/>))}
+      {movie.map((value)=>(<Movie_card data={value}/>))}
     </div>
   );
 }
 
 
-function Movie_card({name,poster,summary,rating}){
+function Movie_card({data}){
   return(
     <div className='card'>
       {/* <h1>hello</h1> */}
-      <img src={poster} alt="movie poster" />
-      <h2 className='tittle'>{name}</h2>
-      <span>⭐{rating}</span>
-      <p>{summary}</p>
+      <img src={data.poster} alt="movie poster" />
+      <h2 className='tittle'>{data.name}</h2>
+      <span>⭐{data.rating}</span>
+      <p>{data.summary}</p>
       <Count />
     </div>
   );
@@ -99,8 +99,8 @@ function Count(){
   const [unlike, setlike] = useState(0);
   return(
     <div>
-      <button onClick={()=>setLike(like + 1)}>👍{like}</button>
-      <button onClick={()=>setlike(unlike + 1)}>👎{unlike}</button>
+      <button onClick={()=>setLike(like + 1)}>👍 {like}</button>
+      <button onClick={()=>setlike(unlike + 1)}>👎 {unlike}</button>
     </div>
   );
 }
