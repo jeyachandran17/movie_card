@@ -1,0 +1,28 @@
+.card{
+  height: 950px;
+  width: 340px;
+  border: none;
+  display: inline-block;
+  margin-right: 30px;
+  position:sticky;
+
+}
+
+img{
+  height:650px;
+  width:340px;
+  margin-bottom: 10px;
+}
+
+.tittle{
+  display: inline;
+}
+
+span{
+  float: right;
+  font-size: large;
+}
+
+button{
+  margin-right: 2px;
+}
