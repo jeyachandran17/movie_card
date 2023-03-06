@@ -20,7 +20,7 @@ export function AddColor() {
         <Button variant='contained' onClick={() => setColorList([...colorList, color])}>Add Color</Button>
       </div>
       <div>
-        {colorList.map((clr) => (<ColorBox color={clr} />))}
+        {colorList.map((clr,index) => (<ColorBox color={clr} key={index} />))}
       </div>
     </div>
   );

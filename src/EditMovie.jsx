@@ -7,6 +7,7 @@ import * as yup from "yup";
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import CircularProgress from '@mui/material/CircularProgress';
+import { API } from './global';
 
 const formValidationSchema = yup.object({
   name : yup.string().required(),
@@ -22,7 +23,7 @@ export function EditMovie() {
   const [movie, setMovie] = useState(null)
   
   useEffect(() => {
-      fetch(`https://63d75fcdafbba6b7c93beca4.mockapi.io/movies/${id}`)
+      fetch(`${API}/movies/${id}`)
         .then((data) => data.json())
           .then((data)=>setMovie(data))
   },[id])
@@ -52,7 +53,7 @@ function EditMovieForm({ movie }) {
   const updateMovie = async (updatedMovie) => {
     // console.log(updatedMovie);
     
-   await fetch(`https://63d75fcdafbba6b7c93beca4.mockapi.io/movies/${movie.id}`, {
+   await fetch(`${API}/movies/${movie.id}`, {
       method : "PUT",
       body: JSON.stringify(updatedMovie),
       headers: {
