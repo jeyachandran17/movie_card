@@ -1,8 +1,7 @@
 export function PageNotFound() {
   return (
     <div className='not-fount'>
-      <img src="https://miro.medium.com/max/1400/1*zE2qnVTJehut7B8P2aMn3A.gif" alt="Not Found the Page" />
-      <h1>Not found the page, pleace find the correct page</h1>
+      <img src="https://webartdevelopers.com/blog/wp-content/uploads/2020/02/404-Error-Lost-And-Alone.gif" className="not-found-image" alt="Not Found the Page" />
     </div>
   );
 }

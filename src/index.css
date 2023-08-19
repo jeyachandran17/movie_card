@@ -1,0 +1,9 @@
+.not-fount{
+    display: flex;
+    min-height: 100vh;
+}
+
+.not-found-image{
+    min-width: 100%;
+}
+
